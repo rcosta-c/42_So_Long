@@ -20,12 +20,14 @@ typedef struct	s_data {
 	int	n_c;
 	int	n_e;
 	int	n_w;
+	int	collected; //esta é nova! falta implementar no codigo.
 	int	map_len;
 	char	**map;
 	int		fd;
 	int	map_lines;
 }			t_data;
 
+typedef struct	
 void    map_reading(t_data *vars, char *file);
 int     ft_map_len(char *line);
 void	check_map (t_data *vars);
