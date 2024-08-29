@@ -92,6 +92,16 @@ void	check_around(t_data *vars, int x, int y)
 
 }
 
+static int	strange_dude(t_data vars, int x, int y)
+{
+	if (vars->map[x][y] != '1' && vars->map[x][y] != 'C' && vars->map[x][y] != 'P' && vars->map[x][y] != 'E' && vars->map[x][y] != '0')
+	{
+		return(1); //VER SE ESTA BEM
+	}
+	else
+		return (0);
+}
+
 void	check_map (t_data *vars)
 {
 	int	x = 0;
@@ -130,6 +140,11 @@ void	check_map (t_data *vars)
 		}
 		else if (vars->map[x][y] == '1')
 			vars->n_w++;
+		else if (strange_dude(vars, x, y))
+		{
+			ft_error("Strange dude on the map!");
+			exit(EXIT_FAILURE);
+		}
 		if(x > end_x)
 			break;
 		y++;
