@@ -75,7 +75,8 @@ SRCS        :=      lib/ft_printf/ft_printstr.c \
                           src/check_filename.c \
                           src/check_av.c \
                           src/check_map.c \
-                          src/map.c \
+			  src/map.c \
+                          src/graphic.c
                           
 OBJS        := $(SRCS:.c=.o)
 
@@ -99,7 +100,7 @@ $(NAME): ${OBJS}
 			@echo "$(GREEN)Linux compilation ${CLR_RMV}of ${YELLOW}$(NAME) ${CLR_RMV}..."
 			@chmod 777 mlx/minilibx_linux/configure
 			@ $(MAKE) -C mlx/minilibx_linux all
-			$(CC) $(CFLAGS) -g3 -o $(NAME) $(OBJS) -Imlx_linux -Lmlx_linux -lmlx -lmlx_Linux -L/usr/lib -lXext -lX11 -lm
+			$(CC) $(CFLAGS) -g3 -o $(NAME) $(OBJS) -L ./mlx/minilibx_linux -lmlx -Ilmlx -lXext -lX11     #-lmImlx_linux -Lmlx_linux -lmlx -lmlx_Linux -L/usr/lib -lXext -lX11 -lm
 			@echo "$(GREEN)$(NAME) created[0m ✔️"
 
 all:		${NAME}

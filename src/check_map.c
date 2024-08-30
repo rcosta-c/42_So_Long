@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_map.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rcosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/30 11:24:19 by rcosta-c          #+#    #+#             */
+/*   Updated: 2024/08/30 11:24:21 by rcosta-c         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 static void	check_walls(t_data *vars)
@@ -92,7 +104,7 @@ void	check_around(t_data *vars, int x, int y)
 
 }
 
-static int	strange_dude(t_data vars, int x, int y)
+static int	strange_dude(t_data *vars, int x, int y)
 {
 	if (vars->map[x][y] != '1' && vars->map[x][y] != 'C' && vars->map[x][y] != 'P' && vars->map[x][y] != 'E' && vars->map[x][y] != '0')
 	{
