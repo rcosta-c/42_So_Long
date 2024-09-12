@@ -27,8 +27,3 @@ error.c        hooks.c	    place_graphics.c  validate.c
 - **MinilibX** - For graphics rendering and window management.
 - **Makefile** - To compile and manage the project.
 - **GCC** - C Compiler.
-
-## 📦 Installation
-
-"bash"
-./solong
