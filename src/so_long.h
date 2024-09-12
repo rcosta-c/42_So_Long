@@ -15,7 +15,7 @@
 
 # include "../lib/gnl/get_next_line.h"
 # include "../lib/ft_printf/ft_printf.h"
-# include "../mlx/minilibx/mlx.h"
+# include "../mlx/minilibx_linux/mlx.h"
 # include <stdio.h>
 # include <math.h>
 # include <string.h>
