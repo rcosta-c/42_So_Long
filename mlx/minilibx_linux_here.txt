@@ -1,0 +1,2 @@
+Unpack Minilibx here.
+Name the folder as "minilibx_linux"
